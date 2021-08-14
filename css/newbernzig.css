@@ -1,0 +1,204 @@
+/* For newbernzig.com */
+:root {
+/*  --blpBodyBgColor:  hsla(144, 100%, 95%, 0.6); */ 
+  --blpHitcntrBgColor: #F5DEB3;
+  --blpHitcntrBorder: 8px ridge yellow;
+  --blpHitcntrColor: rgb(123, 16, 66);
+  --blpFontSize: calc(16px + .3vw);
+}
+
+/* Font Face for the Menu */
+@font-face {
+  font-family: 'icomoon';
+  src: url("https://bartonphillips.net/fonts/icomoon.eot");
+  src: url("https://bartonphillips.net/fonts/icomoon.woff") format('woff'),
+    url("https://bartonphillips.net/fonts/icomoon.eot") format('embedded-opentype'),
+    url("https://bartonphillips.net/fonts/icomoon.ttf") format('truetype'),
+    url("https://bartonphillips.net/fonts/icomoon.svg") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* FontAwesome for twitter, facebook icons */
+@font-face {
+  font-family: 'FontAwesome';
+  src: 
+    url('https://bartonphillips.net/css/allnatural/social/font/fontawesome-webfont.woff') format('woff'),
+    url('https://bartonphillips.net/css/allnatural/social/font/fontawesome-webfont.ttf') format('truetype'),
+    url('https://bartonphillips.net/css/allnatural/social/font/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+ * css clamp(min, prefered, max): for example width: clamp(200px, 50%, 800px) will use 50% until 50% is less then 200px or greater than 800px
+ * then the value is one of the two limits.
+ */
+/* html { font-size: clamp(12px, 16px, 20px); } */
+
+html { font-size: 16px; }
+
+.grid-section {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 20px;
+  grid-template-areas: "head head side" "main main main" "foot foot foot";
+}
+#content {
+  padding: 10px;
+  grid-area: main;
+  background: #efdff6;
+}
+#sidebar {
+  border: 10px groove green;
+  padding: 10px;
+  grid-area: side;
+}
+#aboutWebSite {
+  grid-area: main;
+}
+#header {
+  text-align: center;
+  grid-area: head;
+  background: #f0e5c8;
+}
+footer {
+  text-align: center;
+  grid-area: foot;
+  font-size: x-large;
+}
+img[src*="Z.jpg"] { width: 135px; }
+img[src*="newbern-300anniversary.jpg"] { width: 135px; }
+img[src*="zig sign.jpg"] { height: 400px; }
+img[src*="ziegler exterior.jpg"] { width: 60%; }
+/*
+  The #hitCounter... are for the SiteClass::getCounterWigget() which can be at the bottom of the page.
+  #F5DEB3==rgb(245,222,179) is 'wheat' for the background
+  rgb(123, 16, 66) is a burgundy for the number
+*/  
+#hitCounter {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+}
+#hitCountertbl {
+  font-size: 1em;
+  width: 0;
+  border: var(--blpHitcntrBorder); /*8px ridge yellow;*/
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--blpHitcntrBgColor);
+}
+#hitCountertr {
+  width: 0;
+  border: var(--blpHitcntrBorder);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--blpHitcntrBgColor) 
+}
+#hitCounterth {
+  color: var(--blpHitcntrColor);
+}
+#youtube-vidio { text-align: center; }
+#sidebar a:hover { background: green; color: white; }
+
+#sidebarsmall {
+  display: none;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+/*  position: fixed; */
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  margin-top: -8px;
+  padding-top: 5px;
+  font-size: 1em;
+  line-height: 25px;
+}
+#sidebarsmall hr { margin-right: 20px; }
+#svg1 { width: 40px; height: 40px; }
+#svg2 { display: none; width: 38px; height: 38px; }
+rect { width: 40px; height: 10px; }
+.rect { fill:rgb(0,0,0);stroke-width: 4;stroke:rgb(255,255,255); }
+.line { stroke:rgb(255,0,0);stroke-width: 6; }
+.center { text-align: center; }
+.clear { clear: both; }
+
+.xicon-menu {
+  position: relative;
+  font-family: 'icomoon'; 
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  cursor: pointer;
+/*  background-color: #003984; */
+  color: black;
+  border-radius: 0.3125rem;
+  padding: 3px;
+  font-size: 2rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.xicon-menu:before {
+  content: '\e600';
+}
+
+#smenu {
+  display: none;
+  position: absolute;
+  text-decoration: none; 
+  font-size: 1rem;
+
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-top: 2px;
+  z-index: 100;
+  background-color: #dbe3f9;
+  padding: 0.625rem 0.625rem 0.625rem 10px;
+  line-height: 2rem;
+}
+#smenu a, #smenu:visited {
+  color: black;
+  text-decoration: none;
+}
+
+
+#sidebarsmall input[type=checkbox] {
+  display: none;
+}
+
+#sidebarsmall input[type=checkbox]:checked ~ #smenu {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  html { font-size: 20px; }
+}
+
+@media (max-width: 770px) {
+  #sidebarsmall { display: block; }
+  .grid-section {
+    grid-template-areas: "head head head" "main main main" "foot foot foot";
+  }
+  #sidebar { display: none; } 
+  #content img { width: 100%; }
+  img[src*="newbern-300anniversary.jpg"] { width: 30%; }
+  img[src*="ziegler exterior.jpg"] { width: 90%; }
+  img[src*="Z.jpg"] { width: 30%; margin-top: 80px;}
+}
+
+@media (hover: none) and (pointer: coarse) {
+  #sidebarsmall { display: block; }
+  .grid-section {
+    grid-template-areas: "head head head" "main main main" "foot foot foot";
+  }
+  #sidebar { display: none; } 
+  #content img { width: 100%; }
+  img[src*="newbern-300anniversary.jpg"] { width: 30%; }
+  img[src*="ziegler exterior.jpg"] { width: 90%; }
+  img[src*="Z.jpg"] { width: 30%; margin-top: 80px; }
+}
