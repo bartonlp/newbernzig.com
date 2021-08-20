@@ -97,4 +97,7 @@ will be coming down to the area.</li>
 </ul>
 </div>
 $footer
+</div>
+</body>
+</html>
 EOF;

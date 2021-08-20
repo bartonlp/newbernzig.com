@@ -27,11 +27,13 @@ img[src*="Lincoln.jpg" {
 </style>
 EOF;
 
+$h->banner = "<h1>James City - Home of Free Slaves</h1>";
+
 list($top, $footer) = $S->getPageTopBottom($h);
 
 echo <<<EOF
 $top
-<h1 class="center">James City - Home of Free Slaves</h1>
+<div id="content">
 
 <h3>The City of Freedmen</h2>
 <p>It was March 5, 1862, and rumors were spreading throughout the 
@@ -46,7 +48,7 @@ spread that Union liberators
 occupied <b>New Bern</b>, large numbers of slaves 
 escaped the farms and plantations throughout Eastern NC to seek their freedom.</p>
 
-<img border="0" src="/images/James%20City%20Slave%20House.jpg" alt="Freed slaves in New Bern were finally given access to schools in James City">
+<img src="https://www.newbern-nc.info/images/James%20City%20Slave%20House.jpg" alt="Freed slaves in New Bern were finally given access to schools in James City">
 <p>As the slaves continued to pour into <b>New Bern</b>, Union General 
 Burnside was faced with the growing problem of how to feed, clothe and house 
 the ever-growing population. To further complicate the matter, there were many 
@@ -63,8 +65,8 @@ and provided them with one meal a day. Many freed slaves also worked loading and
 unloading the many supply ships that came to the port city on a weekly basis. Others 
 worked building a railroad bridge across the Trent River to replace the one 
 that was destroyed by Confederate soldiers while they retreated.</p>
-
-<img border="0" src="/images/River_baptism_in_New_Bern.jpg" alt="Religion was very important in the lives of black slaves living in New Bern">
+<br class="clear"><br>
+<img src="https://www.newbern-nc.info/images/River_baptism_in_New_Bern.jpg" alt="Religion was very important in the lives of black slaves living in New Bern">
 
 <p>Colyer helped the freedmen establish churches since religion 
 had played an important role in comforting them as they toiled long hard 
@@ -79,7 +81,7 @@ most part unsympathetic to the plight of the freed slaves. After assuming office
 he took measures that bought him in conflict with Colyer and others who were 
 trying to improve the condition of Blacks in the South. </p>
 
-<p>Although Stanly approved of Colyer's efforts to feed and clothe Blacks, he 
+<p class="clear">Although Stanly approved of Colyer's efforts to feed and clothe Blacks, he 
 opposed educating them and closed the evening schools. Colyer 
 was outraged and went to Washington, D.C. where he had an interview with President 
 Lincoln who assured him that Stanly did not have the authority to shut down the 
@@ -90,7 +92,7 @@ the Army of the Potomac. Because of his hostilities with Stanly, Colyer decided
 to leave the area with Burnside. General John G. Foster, Burnside's successor, appointed 
 Army chaplain James Mears to replace Colyer as Superintendent of the Poor.</p 
 
-<img border="0" src="/images/Abraham%20Lincoln.jpg" alt="President Lincoln was responsibly for freeing all slaves">
+<img src="https://www.newbern-nc.info/images/Abraham%20Lincoln.jpg" alt="President Lincoln was responsibly for freeing all slaves">
 <p>In 1863 when President Lincoln issued the  <b>Emancipation Proclamation</b>, Stanly resigned in protest.
 Soon after the Proclamation was issued, the recruitment of black 
 soldiers into the Union army began in <b>New Bern</b>. In April, 1863, Secretary<b> </b>
@@ -117,6 +119,9 @@ responsible for providing basic shelter, education and medical care to the freed
 slaves. Because of the compassion exhibited by James in helping the Negroes 
 better their lives, the settlement was renamed <b>James City</b>. The area 
 is still called James City and is primarily an African-American neighborhood.</p>
-<hr>	
+</div>
 $footer
+</div>
+</body>
+</html>
 EOF;

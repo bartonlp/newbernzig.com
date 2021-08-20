@@ -8,6 +8,10 @@ SetEnv SITELOADNAME /var/www/vendor/bartonlp/site-class/includes/siteload.php
 # END ENV
 
 RewriteEngine on
+RewriteCond %{HTTP_USER_AGENT} "baiduspider" [NC]
+RewriteRule (.*) - [F,L]
+RewriteRule ^robots\.txt$ robots.php [L,NC]
+RewriteRule ^Sitemap\.xml$ sitemap.php [L,NC]
+
 RewriteRule ^csstest-(.*)\.css$ https://bartonphillips.net/tracker.php?id=$1&csstest [L,QSA]
 
-#RewriteRule ^index.php(.*)$ https://www.newbern-nc.info/ziegler.php$1 [L]

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /Archive/
+Disallow: /mysitemap.json
+Disallow: /other/
+Disallow: /script/
+
+Sitemap: http://www.newbernzig.com/Sitemap.xml

@@ -1,0 +1,14 @@
+[
+  {"item": "index.php", "frequency": "daily", "priority": "1"},
+  {"item": "aboutwebsite.php", "frequency": "monthly", "priority": ".5"},
+  {"item": "Airport.php", "frequency": "monthly", "priority": ".5"},
+  {"item": "New-Bern-dining.php", "frequency": "monthly", "priority": ".5"},
+  {"item": "New-Bern-nc-history.php", "frequency": "monthly", "priority": ".5"},
+  {"item": "Ziegler Clients.php", "frequency": "monthly", "priority": ".5"},
+  {"item": "aboutzig.php", "frequency": "monthly", "priority": ".5"},
+  {"item": "rates.php", "frequency": "monthly", "priority": ".5"},
+  {"item": "New-Bern-Civilwar.php", "frequency": "monthly", "priority": ".5"},
+  {"item": "New-Bern-history2.php", "frequency": "monthly", "priority": ".5"},
+  {"item": "Policies.php", "frequency": "monthly", "priority": ".5"},
+  {"item": "new-bern-weather.php", "frequency": "monthly", "priority": ".5"}
+]

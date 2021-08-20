@@ -1,6 +1,5 @@
 /* For newbernzig.com */
 :root {
-/*  --blpBodyBgColor:  hsla(144, 100%, 95%, 0.6); */ 
   --blpHitcntrBgColor: #F5DEB3;
   --blpHitcntrBorder: 8px ridge yellow;
   --blpHitcntrColor: rgb(123, 16, 66);
@@ -28,15 +27,7 @@
   font-weight: normal;
   font-style: normal;
 }
-
-/*
- * css clamp(min, prefered, max): for example width: clamp(200px, 50%, 800px) will use 50% until 50% is less then 200px or greater than 800px
- * then the value is one of the two limits.
- */
-/* html { font-size: clamp(12px, 16px, 20px); } */
-
 html { font-size: 16px; }
-
 .grid-section {
   display: grid;
   grid-template-columns: 2fr 2fr 1fr;
@@ -67,6 +58,7 @@ footer {
   grid-area: foot;
   font-size: x-large;
 }
+/* The images for banner.i.php */
 img[src*="Z.jpg"] { width: 135px; }
 img[src*="newbern-300anniversary.jpg"] { width: 135px; }
 img[src*="zig sign.jpg"] { height: 400px; }
@@ -100,7 +92,8 @@ img[src*="ziegler exterior.jpg"] { width: 60%; }
 #hitCounterth {
   color: var(--blpHitcntrColor);
 }
-#youtube-vidio { text-align: center; }
+/* End hitCounter */
+
 #sidebar a:hover { background: green; color: white; }
 
 #sidebarsmall {

@@ -9,6 +9,7 @@
   "className": "SiteClass",
   "copyright": "Tyson Group",
   "author": "Steve Tyson",
+  "address": "The Ziegler Hotel Suites<br>1914 Trent Blvd.<br>New Bern, North Carolina 28560<br>Call: 252-638-6868 or 252-514-9157<br>Email: <a href='mailto:NewBernZig@Gmail.com?cc=stevetyson55@gmail.com'>newbernzig@gmail.com</a>",
   "masterdb": "barton",
   "dbinfo": { // if we start doing anything complex we will change this to 'tysonweb' maybe
     "host": "localhost",
@@ -26,10 +27,11 @@
   "count": true,
   "countMe": true,
   "ctrmsg": "Counter Reset: March 1, 2021",
+  "favicon": "/favicon.ico",
   "reset": "2021-03-01",
   "myUri": "https://bartonphillips.net/myUri.json", // may need to add to myUri.json for steve etc.
-  "trackerImg1": "http://www.newbernzig.com/images/Z.jpg",
-  "trackerImg2": "http://www.newbernzig.com/images/newbern-300anniversary.jpg",
+  "trackerImg1": "https://www.newbernzig.com/images/Z.jpg",
+  "trackerImg2": "https://www.newbernzig.com/images/newbern-300anniversary.jpg",
   // the trackerImg should have a slash before or a full url.
   // trackerImg2 will use the default 1px image for 'normal'
   "EMAILADDRESS": "bartonphillips@gmail.com", // NEED to change to tyson group.

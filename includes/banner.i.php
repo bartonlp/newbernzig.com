@@ -32,7 +32,7 @@ BEST RATES</p>
   <h1>Site Links</h1>
   <img src="/images/boopwink.gif"><br>
   <ul>
-    <li><a href="http://www.NewBernZig.com">Main Page</a></li>
+    <li><a href="https://www.newbernzig.com">Main Page</a></li>
     <li><a href="rates.php">Ziegler Hotel Rates</a></li>
     <li><a href="Policies.php">Rules and Policies</a></li>
     <li><a href="Ziegler Clients.php">Hotel Guest Comments</a></li>
@@ -51,9 +51,8 @@ BEST RATES</p>
     <li><a href="http://www.rivertownrentals.com">Long-term Rentals</a>
     <li><a href="/new-bern-weather.php">New Bern Weather</a></li>
     <li><a href="/Airport.php">New Bern Airport</a></li>
-    <li><a href="http://www.tryonpalace.org/">Tryon Palace</a></li>
-    <li><a href="http://www.newbernhistorical.org">New Bern Historical Society</a></li>
-<!--    <li><a href="/New-Bern-happenings.php">Clubs and Organizations</a></li> -->
+    <li><a href="https://www.tryonpalace.org/">Tryon Palace</a></li>
+    <li><a href="https://www.newbernhistorical.org">New Bern Historical Society</a></li>
   </ul>
   <h3>History Links of Interest</h3>
   <ul>
@@ -70,7 +69,7 @@ BEST RATES</p>
   <label for="smallmenu" class="xicon-menu"></label>
   <input type="checkbox" id="smallmenu">
   <ul id="smenu">
-    <li><a href="http://www.NewBernZig.com">Main Page</a></li>
+    <li><a href="https://www.newbernzig.com">Main Page</a></li>
     <li><a href="rates.php">Ziegler Hotel Rates</a></li>
     <li><a href="Policies.php">Rules and Policies</a></li>
     <li><a href="aboutzig.php">Ziegler Hotel History</a></li>
@@ -82,9 +81,8 @@ BEST RATES</p>
     <li><a href="http://www.rivertownrentals.com">Long-term Rentals</a></li>
     <li><a href="/new-bern-weather.php">New Bern Weather</a></li>
     <li><a href="/Airport.php">New Bern Airport</a></li>
-    <li><a href="http://www.tryonpalace.org/">Tryon Palace</a></li>
-    <li><a href="http://www.newbernhistorical.org">New Bern Historical Society</a></li>
-<!--    <li><a href="/New-Bern-happenings.php">Clubs and Organizations</a></li> -->
+    <li><a href="https://www.tryonpalace.org/">Tryon Palace</a></li>
+    <li><a href="https://www.newbernhistorical.org">New Bern Historical Society</a></li>
     <li><a href="/New-Bern-history2.php">New Bern History</a></li>
     <li><a href="/New-Bern-Civilwar.php">The Battle of New Bern</a></li>
     <li><a href="/New-Bern-nc-history.php">James City - Home of Free Slaves</a></li>

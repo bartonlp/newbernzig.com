@@ -153,6 +153,9 @@ Cemetery about a half mile from Cedar Grove Cemetery.</p>
 <br class="clear">
 </div>
 $footer
+</div>
+</body>
+</html>
 EOF;
 
 

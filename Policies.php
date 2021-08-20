@@ -55,4 +55,7 @@ accessories or furnishings, are lost or damaged.
 </ul>
 </div>
 $footer
+</div>
+</body>
+</html>
 EOF;

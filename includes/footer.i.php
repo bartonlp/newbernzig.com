@@ -1,5 +1,5 @@
 <?php
-$lastmod = date("M j, Y H:i", getlastmod());
+$lastmod = date("M j, Y H:i", getlastmod()) . "<br>";
 
 return <<<EOF
 <footer>
@@ -10,13 +10,10 @@ return <<<EOF
 </div>
 
 <h2><a target="_blank" href='aboutwebsite.php'>About This Site</a></h2>
-<div id="address">
 <address>
-  Copyright &copy; $this->copyright<br>
+  Copyright &copy; $this->copyright<br><br>
 $this->address<br>
-<a href='mailto:$this->EMAILADDRESS'>$this->EMAILADDRESS</a>
 </address>
-</div>
 {$arg['msg']}
 {$arg['msg1']}
 <br>

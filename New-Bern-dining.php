@@ -184,4 +184,7 @@ Spicy fried chicken and lots of fixings.
 
 </div>
 $footer
+</div>
+</body>
+</heml>
 EOF;

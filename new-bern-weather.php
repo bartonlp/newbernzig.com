@@ -52,7 +52,7 @@ echo <<<EOF
 $top
 <div id="content">
 
-<h3><a href="http://www.weatherunderground.com/cgi-bin/findweather/getForecast?query=28560">New Bern Weather Forcast</a></h3>
+<h3><a href="https://www.weatherunderground.com/cgi-bin/findweather/getForecast?query=28560">New Bern Weather Forcast</a></h3>
 
 <img src="/images/New Bern NC city hall.jpg" alt="Historic New Bern City Hall"></a>
 <p><b>New Bern, NC</b> has a mild climate with four distinct seasons. While summers can be hot, they are probably not much 

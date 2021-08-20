@@ -9,23 +9,25 @@ $h->banner = "<h1>Coastal Carolina Regional Airport</h1>";
 
 $h->css = <<<EOF
 <style>
+.bold { font-weight: bold; }
 img[src*="Airport"] {
-        width: 280px;
-        float: left;
-        margin-right: 10px;
+  width: 280px;
+  float: left;
+  margin-right: 10px;
 }
 @media (max-width: 500px) {
-        img[src*="Airport"] { float: none; }
+  img[src*="Airport"] { float: none; }
 }        
 </style>
 EOF;
 
 list($top, $footer) = $S->getPageTopBottom($h);
+
 echo <<<EOF
 $top
 <div id="content">
 <img border="0" src="/images/New-Bern-Airport.jpg">
-<p><b>New Bern</b> 
+<p><span class="bold">New Bern</span> 
 and the surrounding areas are fortunate to have a regional airport located only 
 minutes from the historic downtown area.
 Residents and visitors love how easy it is to get here or to reach faraway destinations with only one or two layovers.
@@ -36,14 +38,14 @@ Oriental (sailing capital of the world), Greenville and East Carolina University
 selected Coastal Carolina Regional Airport as one of the &quot;Top 10 most stress-free 
 airports in the United States.&quot;
 </p>
-
-<p class="clear"><b><a href="https://www.aa.com/homePage.do">American Airlines</a></b>
+<br class="clear">
+<p><span class="bold"><a href="https://www.aa.com/homePage.do">American Airlines</a></span>
 has many daily direct flights to Douglas International Airport in Charlotte with connecting flights to cities throughout the United States.<br>
 24-hour reservation hotline 800-433-7300</p>
 
 <div>
 <hr>
-<p><b>Taxi Service</b></p>
+<p class="bold">Taxi Service</p>
 
 <p>White Glove Transport<br>
 (813) 727-0456
@@ -54,8 +56,8 @@ has many daily direct flights to Douglas International Airport in Charlotte with
 </p>
 
 <hr>
-<p><b>Rental Cars</b></p>
-<p><a href="http://www.alamo.com">Alamo</a><br>
+<p class="bold">Rental Cars</p>
+<p><a href="https://www.alamo.com">Alamo</a><br>
 Local reservations (252) 637-5241 <br>
 Worldwide Reservations (800) 462-5266
 </p>
@@ -70,13 +72,13 @@ Local Reservations (252) 637-3021<br>
 Worldwide Reservations (800) 654-3131
 </p>
 
-<p><a href="http://www.nationalcar.com/">National</a><br>
+<p><a href="https://www.nationalcar.com/">National</a><br>
 Local Reservations (252) 637-5241<br>
 Worldwide Reservations (800) 227-7368
 </p>
 
 <hr>
-<p><b>Shipping Services<b></p>
+<p class="bold">Shipping Services</p>
 <p><a href="https://www.dhl.com">DHL</a><br>
 (800) 247-2676
 </p>
@@ -86,7 +88,7 @@ Worldwide Reservations (800) 227-7368
 </p>
 
 <hr>
-<p><b>Need a place to stay while in New Bern?</b></p>
+<p class="bold">Need a place to stay while in New Bern?</p>
 <p>Stay at the Zig, owned by Steve and Jana Tyson, 
 New Bern's iconic <a href="/zeigler.php">Ziegler Hotel</a>.<br>
 (252) 638-6868
@@ -95,4 +97,7 @@ New Bern's iconic <a href="/zeigler.php">Ziegler Hotel</a>.<br>
 
 </div>
 $footer
+</div> <!-- end grid section from banner.i.php -->
+</body>
+</html>
 EOF;

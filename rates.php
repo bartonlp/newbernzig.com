@@ -57,8 +57,10 @@ $top
 <li>Refrigerator
 <li>Free WiFi
 <li>Coffie pot
-<li>Bath room
-<li>Include all utilities
+<li>LED flat-screen TV
+<li>DVR
+<li>New bath rooms
+<li>Includes all utilities
 <li>All prices plus tax
 </ul>
 <p>Extended-stay discounts are always negotiable.</p>
@@ -80,18 +82,20 @@ $20 per night or $75 week pet fee.</p>
 </div>
 
 <div class="h3">Want a larger place? The Abbot Cottage:
-<p>Two bedrooms, living room, kitchen/dining.<br>
+<p>Two bedrooms, living, kitchen/dining and bath rooms.<br>
 $125 per night (three day minimum), $525 per week, $1,500 per month.</p
 </div>
 
 <hr>
 <p>
 No Phones in Rooms, bring your cell phone.<br>
-If you choose to smoke,<br>
-smoking is allowed on covered porches just outside the rooms,
+If you choose to smoke, smoking is allowed on covered porches just outside the rooms,
 benches and ashtray provided.<br>
 <span class="nosmoking">Please Do Not Smoke in the Rooms</span>.</p>
 </div>
 </div>
 $footer
+</div>
+</body>
+</html>
 EOF;

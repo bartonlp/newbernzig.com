@@ -1,2 +1,9 @@
 Archive
 aboutwebsite.php
+analysis.php
+other/
+Sitemap.xml
+*.asv#
+package.json
+package-lock.json
+scripts/
