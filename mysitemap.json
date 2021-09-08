@@ -7,7 +7,7 @@
   "siteName": "Newbernzig",
   "path": "/var/www/newbernzig.com",
   "className": "SiteClass",
-  "copyright": "Tyson Group",
+  "copyright": "Tyson Group", // SiteClass add the date to the start and footer adds "Copyright &copy; "
   "author": "Steve Tyson",
   "address": "The Ziegler Hotel Suites<br>1914 Trent Blvd.<br>New Bern, North Carolina 28560<br>Call: 252-638-6868 or 252-514-9157<br>Email: <a href='mailto:NewBernZig@Gmail.com?cc=stevetyson55@gmail.com'>newbernzig@gmail.com</a>",
   "masterdb": "barton",
