@@ -3,6 +3,10 @@ $_site = require_once(getenv("SITELOADNAME"));
 ErrorClass::setDevelopment(true);
 $S = new $_site->className($_site);
 
+$b->script = <<<EOF
+<script src="https://bartonphillips.net/js/geo.js"></script>
+EOF;
+
 $h->css =<<<EOF
 <style>
 .marilyn { color: red; }
@@ -107,8 +111,8 @@ Stay at &quot;The Zig&quot;<br>
 <!-- image of dogs -->
 <img src="/images/Ziegler.JPG">
 <p>
-The Ziegler is one of the only pet-friendly hotels.<br>
-River and Roscoe welcome your pet in one of our pet-friendly hotel rooms or suites for an additional $20 per day or $75 weekly.</p>
+The Ziegler is one of the few pet-friendly hotels.<br>
+Stella and BoBo welcome your pet in one of our pet-friendly hotel rooms or suites for an additional $20 per day or $75 weekly.</p>
 <hr class="clear">
 
 <!-- TV, bath, fridge images -->  
@@ -116,7 +120,7 @@ River and Roscoe welcome your pet in one of our pet-friendly hotel rooms or suit
 <img src="/images/zieglerbath.JPG">
 <img src="/images/ZIG5-Fridge.JPG">
 
-<p>Quene beds, Flat-screen TVs, updated baths,<br>
+<p>Queen beds, Flat-screen TVs, updated baths,<br>
 refrigerator and microwave,<br>
 coffee pot, DVR, and FREE WiFi in all rooms.
 </p>

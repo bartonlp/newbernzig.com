@@ -15,7 +15,7 @@
     "host": "localhost",
     "user": "barton",
     "password": "7098653",
-    "database": "barton", // for now just generic barton.
+    "database": "newbernzig", // custom database
     "engine": "mysqli"
   },
   "defaultCss": "/css/newbernzig.css", // The symlink below uses 'defaultCss' as the css to use

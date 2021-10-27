@@ -1,5 +1,5 @@
 <?php
-$lastmod = date("M j, Y H:i", getlastmod()) . "<br>";
+// BLP 2021-10-24 -- counterWigget and lastmod passed in from getPageFooter($b)
 
 return <<<EOF
 <footer>
@@ -14,12 +14,12 @@ return <<<EOF
   Copyright &copy; $this->copyright<br><br>
 $this->address<br>
 </address>
-{$arg['msg']}
-{$arg['msg1']}
+{$b->msg}
+{$b->msg1}
 <br>
 $counterWigget
-Last Modified: $lastmod
-{$arg['msg2']}
+$lastmod
+{$b->msg2}
 </footer>
-{$arg['script']}
+{$b->script}
 EOF;

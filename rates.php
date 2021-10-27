@@ -52,7 +52,7 @@ $top
 <div id="content">
 <div class="h3">All rooms, suites and cottages have:
 <ul>
-<li>Quene beds
+<li>Queen beds
 <li>Microwave
 <li>Refrigerator
 <li>Free WiFi

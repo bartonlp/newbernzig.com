@@ -44,7 +44,7 @@ However the Ziegler Hotel was purchased in 2007 by the Tyson Group who are commi
 </p>
 <ul class="clear">
 <li>Remodeled Hotel Rooms
-<li>New Quene Beds
+<li>New QueeneBeds
 <li>Mini-Refrigerator
 <li>Microwave
 <li>Coffee Pot
