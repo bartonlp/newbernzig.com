@@ -14,7 +14,6 @@
   "dbinfo": { // if we start doing anything complex we will change this to 'tysonweb' maybe
     "host": "localhost",
     "user": "barton",
-    "password": "7098653",
     "database": "newbernzig", // custom database
     "engine": "mysqli"
   },
@@ -29,7 +28,6 @@
   "ctrmsg": "Counter Reset: March 1, 2021",
   "favicon": "/favicon.ico",
   "reset": "2021-03-01",
-  //"myUri": "https://bartonphillips.net/myUri.json", // may need to add to myUri.json for steve etc.
   "trackerImg1": "https://www.newbernzig.com/images/Z.jpg",
   "trackerImg2": "https://www.newbernzig.com/images/newbern-300anniversary.jpg",
   // the trackerImg should have a slash before or a full url.
