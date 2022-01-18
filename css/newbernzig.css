@@ -1,9 +1,8 @@
 /* For newbernzig.com */
-:root {
-  --blpHitcntrBgColor: #F5DEB3;
-  --blpHitcntrBorder: 8px ridge yellow;
-  --blpHitcntrColor: rgb(123, 16, 66);
-  --blpFontSize: calc(16px + .3vw);
+@import url('https://bartonphillips.net/css/hitcounter.css');
+
+* {
+  box-sizing: border-box;
 }
 
 /* Font Face for the Menu */
@@ -63,39 +62,7 @@ img[src*="Z.jpg"] { width: 135px; }
 img[src*="newbern-300anniversary.jpg"] { width: 135px; }
 img[src*="zig sign.jpg"] { height: 400px; }
 img[src*="ziegler exterior.jpg"] { width: 60%; }
-/*
-  The #hitCounter... are for the SiteClass::getCounterWigget() which can be at the bottom of the page.
-  #F5DEB3==rgb(245,222,179) is 'wheat' for the background
-  rgb(123, 16, 66) is a burgundy for the number
-*/  
-#hitCounter {
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  text-align: center;
-}
-#hitCountertbl {
-  font-size: 1em;
-  width: 0;
-  border: var(--blpHitcntrBorder); /*8px ridge yellow;*/
-  margin-left: auto;
-  margin-right: auto;
-  background-color: var(--blpHitcntrBgColor);
-}
-#hitCountertr {
-  width: 0;
-  border: var(--blpHitcntrBorder);
-  margin-left: auto;
-  margin-right: auto;
-  background-color: var(--blpHitcntrBgColor) 
-}
-#hitCounterth {
-  color: var(--blpHitcntrColor);
-}
-/* End hitCounter */
-
 #sidebar a:hover { background: green; color: white; }
-
 #sidebarsmall {
   display: none;
   background-color: #fff;
@@ -135,11 +102,9 @@ rect { width: 40px; height: 10px; }
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 .xicon-menu:before {
   content: '\e600';
 }
-
 #smenu {
   display: none;
   position: absolute;
@@ -158,20 +123,15 @@ rect { width: 40px; height: 10px; }
   color: black;
   text-decoration: none;
 }
-
-
 #sidebarsmall input[type=checkbox] {
   display: none;
 }
-
 #sidebarsmall input[type=checkbox]:checked ~ #smenu {
   display: block;
 }
-
 @media (min-width: 1024px) {
   html { font-size: 20px; }
 }
-
 @media (max-width: 770px) {
   #sidebarsmall { display: block; }
   .grid-section {
@@ -183,7 +143,6 @@ rect { width: 40px; height: 10px; }
   img[src*="ziegler exterior.jpg"] { width: 90%; }
   img[src*="Z.jpg"] { width: 30%; margin-top: 80px;}
 }
-
 @media (hover: none) and (pointer: coarse) {
   #sidebarsmall { display: block; }
   .grid-section {

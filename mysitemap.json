@@ -14,7 +14,7 @@
   "dbinfo": { // if we start doing anything complex we will change this to 'tysonweb' maybe
     "host": "localhost",
     "user": "barton",
-    "database": "newbernzig", // custom database
+    "database": "barton", // custom database
     "engine": "mysqli"
   },
   "defaultCss": "/css/newbernzig.css", // The symlink below uses 'defaultCss' as the css to use

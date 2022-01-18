@@ -1,5 +1,10 @@
 <?php
+// BLP 2021-12-15 -- add geo.js
 // BLP 2021-10-24 -- counterWigget and lastmod passed in from getPageFooter($b)
+
+if($b->noGeo !== true) {
+  $geo = "<script src='https://bartonphillips.net/js/geo.js'></script>";
+}
 
 return <<<EOF
 <footer>
@@ -21,5 +26,6 @@ $counterWigget
 $lastmod
 {$b->msg2}
 </footer>
+$geo
 {$b->script}
 EOF;

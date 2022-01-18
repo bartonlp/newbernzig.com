@@ -3,13 +3,6 @@ $_site = require_once(getenv("SITELOADNAME"));
 ErrorClass::setDevelopment(true);
 $S = new $_site->className($_site);
 
-$FINGER_TOKEN = require_once("/var/www/bartonphillipsnet/PASSWORDS/finger-token");
-
-$b->script = <<<EOF
-<script>var FINGER_TOKEN = "$FINGER_TOKEN"; </script>
-<script src="https://bartonphillips.net/js/geo.js"></script>
-EOF;
-
 $h->css =<<<EOF
 <style>
 .marilyn { color: red; }
