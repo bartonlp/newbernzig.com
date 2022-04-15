@@ -1,13 +1,9 @@
 <?php
-if($this->nodb !== true && $this->noTrack !== true) {
-  $image2 = "<img src='https://bartonphillips.net/tracker.php?page=normal&id=$this->LAST_ID&image=$this->trackerImg2' alt='linux counter image.'>";
-  $image3 = "<img src='https://bartonphillips.net/tracker.php?page=noscript&id=$this->LAST_ID'>";
-}
  
 return <<<EOF
 <div class="grid-section">
 <header id="header">
-<img id='logo' data-image="$this->trackerImg1" src="/images/Z.jpg"></a>
+$image1
 $image2
 $mainTitle
 <h2>A Living Part of<br>
@@ -16,11 +12,12 @@ New Bern North Carolina History</h2>
 The Ziegler Suites<br>
 1914 Trent Blvd.<br>
 New Bern, North Carolina 28560<br>
-252-638-6868
+252-638-6868<br>
+<a href="contactus.php">Contact Us</a>
 </address>
 <p>GREAT DISCOUNTS<br>
 BEST RATES</p>
-<img src="/images/ziegler exterior.jpg"> <!-- picture of hotel -->
+<img id="hotelimage" src="/images/resizeimg.png"> <!-- picture of hotel -->
 </header> <!-- end header -->
 
 <!-- Sidebar -->

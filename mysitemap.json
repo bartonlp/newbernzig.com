@@ -10,6 +10,9 @@
   "copyright": "Tyson Group", // SiteClass add the date to the start and footer adds "Copyright &copy; "
   "author": "Steve Tyson",
   "address": "The Ziegler Hotel Suites<br>1914 Trent Blvd.<br>New Bern, North Carolina 28560<br>Call: 252-638-6868 or 252-514-9157<br>Email: <a href='mailto:NewBernZig@Gmail.com?cc=stevetyson55@gmail.com'>newbernzig@gmail.com</a>",
+  // "mainTitle": "", // We use $h->banner in each of the files.
+  "title": "New Bern Zig",
+  "desc": "A Great Place to Stay While Visiting New Bern",
   "masterdb": "barton",
   "dbinfo": { // if we start doing anything complex we will change this to 'tysonweb' maybe
     "host": "localhost",
@@ -17,7 +20,16 @@
     "database": "barton", // custom database
     "engine": "mysqli"
   },
-  "defaultCss": "/css/newbernzig.css", // The symlink below uses 'defaultCss' as the css to use
+  "errorMode": {
+    "development": true, // development automatically sets email to true.
+                         // If development is true then noEmail will be
+                         // set to true unless noEmail is set to false!
+                         // Only false not null or just missing.
+    "noEmail": null,   // Set it to null will not affect the true above which sets it to true also.
+    "noHtml": false,
+    "noOutput": false
+  },
+  "defaultCss": "css/newbernzig.css", // The symlink below uses 'defaultCss' as the css to use
   "headFile": "includes/head.i.php", // This is a symlink to baronphillips.com/includes/head.i.php
   "bannerFile": "includes/banner.i.php", // NOTE: the *File must NOT HAVE a preceeding slash
   "footerFile": "includes/footer.i.php", // because they are file_get_contents() loaded

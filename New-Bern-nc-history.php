@@ -4,11 +4,10 @@ $_site = require_once(getenv("SITELOADNAME"));
 ErrorClass::setDevelopment(true);
 $S = new $_site->className($_site);
 
-$h->title = "Tyson Group";
-$h->desc = "Tyson Group";
+$h->banner = "<h1>James City - Home of Free Slaves</h1>";
+$h->meta = "<meta name='Editor' content='Bonnie Burch'>";
 
 $h->css = <<<EOF
-<style>
 img {
         margin-right: 10px;
 }
@@ -24,12 +23,10 @@ img[src*="Lincoln.jpg" {
         width: 98px;
         float: right;
 }
-</style>
 EOF;
 
-$h->banner = "<h1>James City - Home of Free Slaves</h1>";
 
-list($top, $footer) = $S->getPageTopBottom($h);
+[$top, $footer] = $S->getPageTopBottom($h);
 
 echo <<<EOF
 $top

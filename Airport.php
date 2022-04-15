@@ -2,10 +2,10 @@
 // BLP 2021-01-31 -- edited
 
 $_site = require_once(getenv("SITELOADNAME"));
-ErrorClass::setDevelopment(true);
 $S = new $_site->className($_site);
 
 $h->banner = "<h1>Coastal Carolina Regional Airport</h1>";
+$h->meta = "<meta name='Editor' content='Bonnie Burch'>";
 
 $h->css = <<<EOF
 <style>
@@ -21,7 +21,7 @@ img[src*="Airport"] {
 </style>
 EOF;
 
-list($top, $footer) = $S->getPageTopBottom($h);
+[$top, $footer] = $S->getPageTopBottom($h);
 
 echo <<<EOF
 $top

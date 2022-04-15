@@ -58,10 +58,9 @@ footer {
   font-size: x-large;
 }
 /* The images for banner.i.php */
-img[src*="Z.jpg"] { width: 135px; }
-img[src*="newbern-300anniversary.jpg"] { width: 135px; }
-img[src*="zig sign.jpg"] { height: 400px; }
-img[src*="ziegler exterior.jpg"] { width: 60%; }
+#logo { width: 135px; height: 135px;}
+#headerImage2 { width: 135px; height: 135px; }
+#hotelimage { width: 60%; }
 #sidebar a:hover { background: green; color: white; }
 #sidebarsmall {
   display: none;
@@ -139,10 +138,11 @@ rect { width: 40px; height: 10px; }
   }
   #sidebar { display: none; } 
   #content img { width: 100%; }
-  img[src*="newbern-300anniversary.jpg"] { width: 30%; }
-  img[src*="ziegler exterior.jpg"] { width: 90%; }
-  img[src*="Z.jpg"] { width: 30%; margin-top: 80px;}
+  #headerImage2 { width: 112px; height: 112px; }
+  #hotelimage { width: 90%; } /* image in banner.i.php of the front of the hotel */
+  #logo { width: 112px; height: 112px; margin-top: 80px;} /* 'Z' in banner.i.php as the 'logo' */
 }
+/* Check for a phone */
 @media (hover: none) and (pointer: coarse) {
   #sidebarsmall { display: block; }
   .grid-section {
@@ -150,7 +150,7 @@ rect { width: 40px; height: 10px; }
   }
   #sidebar { display: none; } 
   #content img { width: 100%; }
-  img[src*="newbern-300anniversary.jpg"] { width: 30%; }
-  img[src*="ziegler exterior.jpg"] { width: 90%; }
-  img[src*="Z.jpg"] { width: 30%; margin-top: 80px; }
+  #headerImage2 { width: 112px; height: 112px; }
+  #hotelimage { width: 90%; } /* image in banner.i.php of the front of the hotel */
+  #logo { width: 112px; height: 112px; margin-top: 80px; } /* 'Z' in banner.i.php as the 'logo' */
 }

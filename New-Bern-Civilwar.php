@@ -4,9 +4,9 @@ $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 
 $h->banner = "<h1>The Battle of New Bern</h1>";
+$h->meta = "<meta name='Editor' content='Bonnie Burch'>";
 
 $h->css = <<<EOF
-<style>
 #content img { margin-right: 10px; }
 img[src*="civil01.jpg"] {
         width: 150px;
@@ -56,10 +56,9 @@ img[src*="monument.jpg"] {
 @media (max-width: 500px) {
         img[src*="soilder1"], img[src*="monument"] { float: none; }
 }
-</style>
 EOF;
 
-list($top, $footer) = $S->getPageTopBottom($h);
+[$top, $footer] = $S->getPageTopBottom($h);
 
 echo <<<EOF
 $top

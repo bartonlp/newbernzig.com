@@ -1,14 +1,13 @@
 <?php
 // BLP 2021-02-21 -- notedited
+
 $_site = require_once(getenv("SITELOADNAME"));
-ErrorClass::setDevelopment(true);
 $S = new $_site->className($_site);
 
-$h->title = "Tyson Group";
-$h->desc = "Tyson Group";
+$h->banner = "<h1>New Bern History</h1>";
+$h->meta = "<meta name='Editor' content='Bonnie Burch'>";
 
 $h->css = <<<EOF
-<style>
 .up { margin-top: -8px; }
 .justify { text-align: justify; }
 img { margin-right: 10px; }
@@ -57,12 +56,9 @@ img[src*="sailboat"] {
         width: 248px;
         float: left;
 }
-</style>
 EOF;
 
-$h->banner = "<h1>New Bern History</h1>";
-
-list($top, $footer) = $S->getPageTopBottom($h);
+[$top, $footer] = $S->getPageTopBottom($h);
 
 echo <<<EOF
 $top

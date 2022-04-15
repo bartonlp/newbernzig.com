@@ -1,13 +1,15 @@
 <?php
+// Bonnie edited BLP 2022-03-01 -- 
 $_site = require_once(getenv("SITELOADNAME"));
-ErrorClass::setDevelopment(true);
 $S = new $_site->className($_site);
+
+$h->banner = "<h1>The Ziegler Hotel Rates</h1>";
+$h->meta = "<meta name='Editor' content='Bonnie Burch'>";
 
 // css clamp(min, prefered, max): for example width: clamp(200px, 50%, 800px) will use 50% until 50% is less then 200px or greater than 800px
 // then the value is one of the two limits.
 
 $h->css = <<<EOF
-<style>
 .h3 {
   font-size: 2.2em;
   font-weight: bold;
@@ -40,12 +42,9 @@ $h->css = <<<EOF
   }
   .h3 { font-size: 1.2em; }
 }
-</style>
 EOF;
 
-$h->banner = "<h1>The Ziegler Hotel Rates</h1>";
-
-list($top, $footer) = $S->getPageTopBottom($h);
+[$top, $footer] = $S->getPageTopBottom($h);
 
 echo <<<EOF
 $top
@@ -56,10 +55,10 @@ $top
 <li>Microwave
 <li>Refrigerator
 <li>Free WiFi
-<li>Coffie pot
+<li>Coffee pot
 <li>LED flat-screen TV
 <li>DVR
-<li>New bath rooms
+<li>New bathrooms
 <li>Includes all utilities
 <li>All prices plus tax
 </ul>
@@ -68,28 +67,28 @@ $top
 <hr>
 <div class="h3">Rooms:
 <p>One night $89,
-two or more night $84,
+two or more nights $84,
 per week $329.
 </p>
 </div>
 
 <div class="h3">Suites:
 <p>The Elvis and the Marilyn Suites.
-An additional fold out or captains bed, stack washer/dryer, stove, dishwasher.<br>
-$125 per night (with two day minumum), $449 per week, $1,400 per month.<br>
-Some Pets allowed at Proprietor's Sole Discretion.<br>
+An additional fold-out or captain's bed, stack washer/dryer, stove, dishwasher.<br>
+$125 per night (with two-day minumum), $449 per week, $1,400 per month.<br>
+Some pets allowed at Proprietor's Sole Discretion.<br>
 $20 per night or $75 week pet fee.</p>
 </div>
 
 <div class="h3">Want a larger place? The Abbot Cottage:
 <p>Two bedrooms, living, kitchen/dining and bath rooms.<br>
-$125 per night (three day minimum), $525 per week, $1,500 per month.</p
+$125 per night (three-day minimum), $525 per week, $1,500 per month.</p
 </div>
 
 <hr>
 <p>
-No Phones in Rooms, bring your cell phone.<br>
-If you choose to smoke, smoking is allowed on covered porches just outside the rooms,
+No phones in rooms, bring your cell phone.<br>
+If you choose to smoke, it is allowed on covered porches just outside the rooms,
 benches and ashtray provided.<br>
 <span class="nosmoking">Please Do Not Smoke in the Rooms</span>.</p>
 </div>

@@ -2,18 +2,17 @@
 // BLP 2021-01-31 -- edited
 
 $_site = require_once(getenv("SITELOADNAME"));
-ErrorClass::setDevelopment(true);
 $S = new $_site->className($_site);
 
 $h->banner = "<h1>Dining Out in New Bern</h1>";
+$h->meta = "<meta name='Editor' content='Bonnie Burch'>";
 
 $h->css = <<<EOF
-<style>
 .list { list-style-type: disc; }
 .list li { margin-bottom: 10px; }
-</style>
 EOF;
-list($top, $footer) = $S->getPageTopBottom($h);
+
+[$top, $footer] = $S->getPageTopBottom($h);
 
 echo <<<EOF
 $top

@@ -1,17 +1,18 @@
 <?php
+
 $_site = require_once(getenv("SITELOADNAME"));
-ErrorClass::setDevelopment(true);
 $S = new $_site->className($_site);
 
+$h->banner = "<h1>Guest Comments</h1>";
+$h->meta = "<meta name='Editor' content='Bonnie Burch'>";
+
 $h->css =<<<EOF
-<style>
 .even { color: red; }
 .odd { color: green; }
 ul { list-style: none; }
-</style>
 EOF;
-$h->banner = "<h1>Guest Comments</h1>";
-list($top, $footer) = $S->getPageTopBottom($h, $b);
+
+[$top, $footer] = $S->getPageTopBottom($h, $b);
 
 echo <<<EOF
 $top

@@ -1,12 +1,15 @@
 <?php
+
 $_site = require_once(getenv("SITELOADNAME"));
-ErrorClass::setDevelopment(true);
 $S = new $_site->className($_site);
 
+$h->banner = "<h1>The Ziegler Suites</h1>";
+$h->meta = "<meta name='Editor' content='Bonnie Burch'>";
+
 $h->css =<<<EOF
-<style>
 .marilyn { color: red; }
-.nosmoking { color: red; } 
+.nosmoking { color: red; }
+img[src*="zig sign.jpg"] { height: 400px; }
 img[src*="/images/Marilyn.png"] { height: 600px; }
 img[src*="animatedElvis5.gif"] { float: left; padding-right: 10px; width: 200px;}
 img[src*="blues bros.JPG"] { height: 400px; }
@@ -75,12 +78,9 @@ address { font-size: 1.2em; }
   #content img[src*="animatedElvis5.gif"] {width: 30%; }
   #content img[src*="an-lav~1.gif"] { width: 30%; }
 }
-</style>
 EOF;
 
-$h->banner = "<h1>The Ziegler Suites</h1>";
-
-list($top, $footer) = $S->getPageTopBottom($h, $b);
+[$top, $footer] = $S->getPageTopBottom($h);
 
 // Render
 

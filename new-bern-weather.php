@@ -2,13 +2,12 @@
 // BLP 2021-01-31 -- edited
 
 $_site = require_once(getenv("SITELOADNAME"));
-ErrorClass::setDevelopment(true);
 $S = new $_site->className($_site);
 
 $h->banner = "<h1>New Bern Weather</h1>";
+$h->meta = "<meta name='Editor' content='Bonnie Burch'>";
 
 $h->css = <<<EOF
-<style>
 img { margin-right: 10px; }
 img[src*="hall.jpg"] {
         width: 150px;
@@ -44,10 +43,10 @@ img[src*="colors.jpg"] {
                 float: left;
         }
 }        
-</style>
 EOF;
 
-list($top, $footer) = $S->getPageTopBottom($h);
+[$top, $footer] = $S->getPageTopBottom($h);
+
 echo <<<EOF
 $top
 <div id="content">
