@@ -1,6 +1,5 @@
 <?php
-// BLP 2021-12-15 -- add geo.js
-// BLP 2021-10-24 -- counterWigget and lastmod passed in from getPageFooter($b)
+// Custom due to the Facebook info
 
 return <<<EOF
 <footer>

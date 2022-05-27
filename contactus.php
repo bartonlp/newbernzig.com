@@ -41,13 +41,16 @@ if($_POST['page'] == "post") {
 
   $address = "newbernzig@gmail.com";
   $agent = substr($S->agent, 0, 254); // keep it small
-
+  $agent = $S->escape($agent);
+  
   $msg = <<<EOF
 Name: $name
 Email: $email
 Message: $msg
 EOF;
 
+  $msg = $S->escape($msg);
+  
   $verify = $retAr['success'] == "1" ? 1 : "0";
   $reason = $retAr['error-codes'][0];
   
