@@ -27,9 +27,11 @@ EOF;
 $recaptcha = require_once("/var/www/bartonphillipsnet/PASSWORDS/newbernzig-recaptcha.php");
 
 if($_POST['page'] == "post") {
-  extract($_POST);
+  extract($_POST); // name, email, subject, msg
   $post['response'] = $_POST['g-recaptcha-response'];
   $post['secret'] = $recaptcha['secretKey']; // google grcapcha key
+
+  // This can be a file-get_contents();
   
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -42,6 +44,7 @@ if($_POST['page'] == "post") {
   $address = "newbernzig@gmail.com";
   $agent = substr($S->agent, 0, 254); // keep it small
   $agent = $S->escape($agent);
+  $subject = $S->escape($subject);
   
   $msg = <<<EOF
 Name: $name
