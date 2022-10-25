@@ -68,14 +68,14 @@ $top
 <div class="h3">Rooms:
 <p>One night $89,
 two or more nights $84,
-per week $329.
+per week $350.
 </p>
 </div>
 
 <div class="h3">Suites:
 <p>The Elvis and the Marilyn Suites.
 An additional fold-out or captain's bed, stack washer/dryer, stove, dishwasher.<br>
-$125 per night (with two-day minumum), $449 per week, $1,400 per month.<br>
+$125 per night (with two-day minumum), $550 per week, $1,500 per month.<br>
 Some pets allowed at Proprietor's Sole Discretion.<br>
 $20 per night or $75 week pet fee.</p>
 </div>

@@ -47,8 +47,8 @@ has many daily direct flights to Douglas International Airport in Charlotte with
 <hr>
 <p class="bold">Taxi Service</p>
 
-<p>White Glove Transport<br>
-(813) 727-0456
+<p>Airport Taxi, Limo & Shuttle of New Bern LLC<br>
+(252) 631-0111
 </p>
 
 <p><a href="https://www.uber.com/global/en/airports/ewn">Uber</a><br>
@@ -77,6 +77,11 @@ Local Reservations (252) 637-5241<br>
 Worldwide Reservations (800) 227-7368
 </p>
 
+<p><a href="https://www.enterprise.com/en/home.html">Enterprise</a><br>
+Local Reservations (252) 514-2575<br>
+Worldwide Reservations (855) 266-9289
+</p>
+
 <hr>
 <p class="bold">Shipping Services</p>
 <p><a href="https://www.dhl.com">DHL</a><br>
@@ -87,10 +92,13 @@ Worldwide Reservations (800) 227-7368
 (800) 463-3339
 </p>
 
+<p><a href="https://www.ups.com/us/en/Home.page">UPS</a><br>
+(800) 742-5877, local (252) 637-7500
+</p>
 <hr>
 <p class="bold">Need a place to stay while in New Bern?</p>
 <p>Stay at the Zig, owned by Steve and Jana Tyson, 
-New Bern's iconic <a href="/zeigler.php">Ziegler Hotel</a>.<br>
+New Bern's iconic <a href="/">Ziegler Hotel</a>.<br>
 (252) 638-6868
 </p>
 </div>

@@ -40,8 +40,8 @@ BEST RATES</p>
   </ul>
   <h3>Things to Do</h3>
   <ul>
-    <li><a href="http://www.ncmove.com">New Bern Real Estate</a></li>
-    <li><a href="http://www.rivertownrentals.com">Long-term Rentals</a>
+    <li><a href="https://www.findnewbernhomes.com/">New Bern Real Estate</a></li>
+    <li><a href="https://rivertownerentals.info/">Long-term Rentals</a>
     <li><a href="/new-bern-weather.php">New Bern Weather</a></li>
     <li><a href="/Airport.php">New Bern Airport</a></li>
     <li><a href="https://www.tryonpalace.org/">Tryon Palace</a></li>

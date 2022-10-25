@@ -24,7 +24,7 @@ EOF;
 
 [$top, $footer] = $S->getPageTopBottom($h);
 
-$recaptcha = require_once("/var/www/bartonphillipsnet/PASSWORDS/newbernzig-recaptcha.php");
+$recaptcha = require_once("/var/www/PASSWORDS/newbernzig-recaptcha.php"); // This is an assoc array
 
 if($_POST['page'] == "post") {
   extract($_POST); // name, email, subject, msg
