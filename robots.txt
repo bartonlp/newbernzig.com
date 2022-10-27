@@ -1,7 +1,7 @@
-User-agent: *
-Disallow: /Archive/
-Disallow: /mysitemap.json
-Disallow: /other/
-Disallow: /script/
-
-Sitemap: http://www.newbernzig.com/Sitemap.xml
+user-agent: *
+disallow: /Archive/
+disallow: /mysitemap.json
+disallow: /other/
+disallow: /script/
+disallow: /css/
+Sitemap: https://www.newbernzig.com/Sitemap.xml
