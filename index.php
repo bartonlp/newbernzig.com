@@ -86,17 +86,18 @@ EOF;
 echo <<<EOF
 $top
 <div id="content">
-<!-- Marilyn: The Ziegler Suites Video -->
-<div id="youtube-vidio">
-<iframe src="https://www.youtube.com/embed/nGNz27RjAok?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
 <div class="center">
 <h2>Going to be in New Bern NC?<br>
 Stay at &quot;The Zig&quot;<br>
 1914 Trent Blvd. New Bern, NC 28560<br>
 <span class="marilyn">Look for Marilyn</span></h2>
 <img src="/images/Marilyn.png"><br>
+
+<!-- Marilyn: The Ziegler Suites Video -->
+<div id="youtube-vidio">
+<iframe src="https://www.youtube.com/embed/nGNz27RjAok?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
 <img src="/images/zig sign.jpg">
 <img src="/images/blues bros.JPG">
 <img src="/images/zig-fOUNTAIN.JPG"><br>
