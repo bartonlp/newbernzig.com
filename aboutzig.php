@@ -3,17 +3,17 @@
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 
-$h->banner = "<h1>Ziegler Hotel History</h1>";
-$h->meta = "<meta name='Editor' content='Bonnie Burch'>";
+$S->banner = "<h1>Ziegler Hotel History</h1>";
+$S->meta = "<meta name='Editor' content='Bonnie Burch'>";
 
-$h->css =<<<EOF
+$S->css =<<<EOF
 img[src*="zig_postcard.jpg"] {
   float: left;
   margin-right: 10px;
 }
 EOF;
 
-[$top, $footer] = $S->getPageTopBottom($h, $b);
+[$top, $footer] = $S->getPageTopBottom();
 
 echo <<<EOF
 $top

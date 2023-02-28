@@ -4,15 +4,15 @@
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 
-$h->banner = "<h1>Dining Out in New Bern</h1>";
-$h->meta = "<meta name='Editor' content='Bonnie Burch'>";
+$S->banner = "<h1>Dining Out in New Bern</h1>";
+$S->meta = "<meta name='Editor' content='Bonnie Burch'>";
 
-$h->css = <<<EOF
+$S->css = <<<EOF
 .list { list-style-type: disc; }
 .list li { margin-bottom: 10px; }
 EOF;
 
-[$top, $footer] = $S->getPageTopBottom($h);
+[$top, $footer] = $S->getPageTopBottom();
 
 echo <<<EOF
 $top

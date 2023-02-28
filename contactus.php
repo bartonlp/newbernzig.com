@@ -3,13 +3,13 @@
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 
-$h->banner = "<h1>Contact Us</h1>";
-$h->meta = "<meta name='Editor' content='Bonnie Burch'>";
-$h->script = <<<EOF
+$S->banner = "<h1>Contact Us</h1>";
+$S->meta = "<meta name='Editor' content='Bonnie Burch'>";
+$S->h_script = <<<EOF
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 EOF;
 
-$h->css = <<<EOF
+$S->css = <<<EOF
 input { font-size: var(--blpFontSize); width: 250px; }
 textarea { font-size: var(--blpFontSize); width: 250px; height: 100px; }
 button {
@@ -22,23 +22,32 @@ button {
 #form { grid-area: main; margin: auto; width: 360px;  border: 1px solid black; padding: 5px;}
 EOF;
 
-[$top, $footer] = $S->getPageTopBottom($h);
+[$top, $footer] = $S->getPageTopBottom();
 
 $recaptcha = require_once("/var/www/PASSWORDS/newbernzig-recaptcha.php"); // This is an assoc array
 
 if($_POST['page'] == "post") {
   extract($_POST); // name, email, subject, msg
-  $post['response'] = $_POST['g-recaptcha-response'];
-  $post['secret'] = $recaptcha['secretKey']; // google grcapcha key
 
-  // This can be a file-get_contents();
-  
-  $ch = curl_init();
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-  curl_setopt($ch, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
-  curl_setopt($ch, CURLOPT_POST, true);
-  curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-  $ret = curl_exec($ch);
+  $response = $_POST['g-recaptcha-response'];
+  $secret = $recaptcha['secretKey']; // google grcaptcha key
+
+  $options = ['http' => [
+                         'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                         'method'  => 'POST',
+                         'content' => http_build_query(["response"=>$response, "secret"=>$secret])
+                        ]
+             ];
+
+  // Now we create a context from the options
+
+  $context  = stream_context_create($options);
+
+  // Now this is going to do a POST!
+  // NOTE we must have the full url with https!
+  // If we are doing a post that does not need to return anything we can avoid the assignment.
+
+  $ret = file_get_contents("https://www.google.com/recaptcha/api/siteverify", false, $context);
   $retAr = json_decode($ret, true);
 
   $address = "newbernzig@gmail.com";
@@ -54,13 +63,13 @@ EOF;
 
   $msg = $S->escape($msg);
   
-  $verify = $retAr['success'] == "1" ? 1 : "0";
+  $verify = empty($retAr['success']) ? 0 : 1;
   $reason = $retAr['error-codes'][0];
   
   $S->query("insert into $S->masterdb.contact_emails (site, ip, agent, subject, message, verify, reason, created, lasttime) ".
             "values('$S->siteName', '$S->ip', '$agent', '$subject', '$msg', '$verify', '$reason', now(), now())");
 
-  if($verify != "1") {
+  if($verify !== true) {
     header( "refresh:5;url=contactus.php" );
 
     echo <<<EOF

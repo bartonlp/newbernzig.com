@@ -3,13 +3,13 @@
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 
-$h->banner = "<h1>The Ziegler Hotel Rates</h1>";
-$h->meta = "<meta name='Editor' content='Bonnie Burch'>";
+$S->banner = "<h1>The Ziegler Hotel Rates</h1>";
+$S->meta = "<meta name='Editor' content='Bonnie Burch'>";
 
 // css clamp(min, prefered, max): for example width: clamp(200px, 50%, 800px) will use 50% until 50% is less then 200px or greater than 800px
 // then the value is one of the two limits.
 
-$h->css = <<<EOF
+$S->css = <<<EOF
 .h3 {
   font-size: 2.2em;
   font-weight: bold;
@@ -44,7 +44,7 @@ $h->css = <<<EOF
 }
 EOF;
 
-[$top, $footer] = $S->getPageTopBottom($h);
+[$top, $footer] = $S->getPageTopBottom();
 
 echo <<<EOF
 $top

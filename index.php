@@ -2,10 +2,10 @@
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 
-$h->banner = "<h1>The Ziegler Suites</h1>";
-$h->meta = "<meta name='Editor' content='Bonnie Burch'>";
+$S->banner = "<h1>The Ziegler Suites</h1>";
+$S->meta = "<meta name='Editor' content='Bonnie Burch'>";
 
-$h->css =<<<EOF
+$S->css =<<<EOF
 .marilyn { color: red; }
 .nosmoking { color: red; }
 img[src*="zig sign.jpg"] { height: 400px; }
@@ -79,7 +79,7 @@ address { font-size: 1.2em; }
 }
 EOF;
 
-[$top, $footer] = $S->getPageTopBottom($h);
+[$top, $footer] = $S->getPageTopBottom();
 
 // Render
 

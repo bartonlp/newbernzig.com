@@ -3,16 +3,16 @@
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 
-$h->banner = "<h1>Guest Comments</h1>";
-$h->meta = "<meta name='Editor' content='Bonnie Burch'>";
+$S->banner = "<h1>Guest Comments</h1>";
+$S->meta = "<meta name='Editor' content='Bonnie Burch'>";
 
-$h->css =<<<EOF
+$S->css =<<<EOF
 .even { color: red; }
 .odd { color: green; }
 ul { list-style: none; }
 EOF;
 
-[$top, $footer] = $S->getPageTopBottom($h, $b);
+[$top, $footer] = $S->getPageTopBottom();
 
 echo <<<EOF
 $top

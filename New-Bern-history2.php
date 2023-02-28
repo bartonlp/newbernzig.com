@@ -4,10 +4,10 @@
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 
-$h->banner = "<h1>New Bern History</h1>";
-$h->meta = "<meta name='Editor' content='Bonnie Burch'>";
+$S->banner = "<h1>New Bern History</h1>";
+$S->meta = "<meta name='Editor' content='Bonnie Burch'>";
 
-$h->css = <<<EOF
+$S->css = <<<EOF
 .up { margin-top: -8px; }
 .justify { text-align: justify; }
 img { margin-right: 10px; }
@@ -58,7 +58,7 @@ img[src*="sailboat"] {
 }
 EOF;
 
-[$top, $footer] = $S->getPageTopBottom($h);
+[$top, $footer] = $S->getPageTopBottom();
 
 echo <<<EOF
 $top
