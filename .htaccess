@@ -1,8 +1,13 @@
-Require all granted
+<RequireAll>
+ Require all granted
+ Require not ip 193.42.33.5
+</RequireAll>
+
 Header set Access-Control-Allow-Origin *
 
 # SET ENV VARIABLES
 SetEnv SITELOADNAME /var/www/vendor/bartonlp/site-class/includes/siteload.php
+setEnv SITECLASS_DIR /var/www/vendor/bartonlp/site-class/includes
 # END ENV
 
 RewriteEngine on
