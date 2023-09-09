@@ -3,7 +3,7 @@ $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 
 $S->banner = "<h1>The Ziegler Suites</h1>";
-$S->meta = "<meta name='Editor' content='Bonnie Burch'>";
+$S->meta = "<meta name='Editor' content='Bonnie Burch 5/20/23'>";
 
 $S->css =<<<EOF
 .marilyn { color: red; }
@@ -116,7 +116,7 @@ Stella and BoBo welcome your pet in one of our pet-friendly hotel rooms or suite
 <img src="/images/zieglerbath.JPG">
 <img src="/images/ZIG5-Fridge.JPG">
 
-<p>Queen beds, Flat-screen TVs, updated baths,<br>
+<p>Queen beds, flat-screen TVs, updated baths,<br>
 refrigerator and microwave,<br>
 coffee pot, DVR, and FREE WiFi in all rooms.
 </p>
@@ -215,9 +215,9 @@ for choosing &quot;The Zig&quot; Hotel</h3>
 Two bedrooms, one bath, full kitchen.<br>
 Fully furnished, linens, cookware,<br>
 WIFI and cable TV included.<br>
-Maid service available for an extra charge<br>
+Maid service available for an extra charge.<br>
 $189 per night, $399 for three nights or $550 per week.<br>
-Extended-stay discounts negotiated<br>
+Extended-stay discounts negotiated.<br>
 <br>
 <img src="/images/8TH STREET12.JPG">
 <img src="/images/8th.JPG">
@@ -248,7 +248,7 @@ Please <span class="nosmoking">Do Not Smoke in the Rooms</span></h2>
 <hr>
 
 <!-- Address -->
-<h2 class="center">No phones in rooms - bring your cell phone<br>
+<h2 class="center">No phones in rooms - bring your cell phone.<br>
 Reserve your hotel room today!</h2>
 </div>
 

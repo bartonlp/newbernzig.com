@@ -4,7 +4,6 @@ $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 
 $S->banner = "<h1>Guest Comments</h1>";
-$S->meta = "<meta name='Editor' content='Bonnie Burch'>";
 
 $S->css =<<<EOF
 .even { color: red; }

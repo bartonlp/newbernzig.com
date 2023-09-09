@@ -4,7 +4,7 @@ $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 
 $S->banner = "<h1>The Ziegler Hotel Rates</h1>";
-$S->meta = "<meta name='Editor' content='Bonnie Burch'>";
+$S->meta = "<meta name='Editor' content='Bonnie Burch 5/20/23'>";
 
 // css clamp(min, prefered, max): for example width: clamp(200px, 50%, 800px) will use 50% until 50% is less then 200px or greater than 800px
 // then the value is one of the two limits.
@@ -68,7 +68,7 @@ $top
 <div class="h3">Rooms:
 <p>One night $89,
 two or more nights $84,
-per week $350.
+per week $499, per month $1,350.
 </p>
 </div>
 
