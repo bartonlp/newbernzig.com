@@ -39,6 +39,7 @@ BEST RATES</p>
     <li><a href="Policies.php">Rules and Policies</a></li>
     <li><a href="Ziegler Clients.php">Hotel Guest Comments</a></li>
     <li><a href="aboutzig.php">Ziegler Hotel History</a></li>
+    <li><a href="contactus.php">Contact Us</a></li>
   </ul>
   <h3>Getaway Package</h3>
   <ul>

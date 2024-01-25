@@ -29,7 +29,7 @@
 html { font-size: 16px; }
 .grid-section {
   display: grid;
-  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-columns: 2fr 2fr .5fr;
   grid-template-rows: auto;
   column-gap: 20px;
   grid-template-areas: "head head side" "main main main" "foot foot foot";
@@ -51,6 +51,7 @@ html { font-size: 16px; }
   text-align: center;
   grid-area: head;
   background: #f0e5c8;
+  padding-top: 15px;
 }
 footer {
   text-align: center;

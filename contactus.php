@@ -10,6 +10,12 @@ $S->h_script = <<<EOF
 EOF;
 
 $S->css = <<<EOF
+#error { text-align: center; color: red; animation: fadeOut 10s linear; animation-fill-mode: forwards; }
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; display: none; }
+}
+
 input { font-size: var(--blpFontSize); width: 250px; }
 textarea { font-size: var(--blpFontSize); width: 250px; height: 100px; }
 button {
@@ -19,7 +25,8 @@ button {
   color: white;
   padding: 10px;
 }
-#form { grid-area: main; margin: auto; width: 360px;  border: 1px solid black; padding: 5px;}
+#container { grid-area: main; }
+#form { margin: auto; width: 360px;  border: 1px solid black; padding: 5px;}
 EOF;
 
 [$top, $footer] = $S->getPageTopBottom();
@@ -28,14 +35,15 @@ $recaptcha = require_once("/var/www/PASSWORDS/newbernzig-recaptcha.php"); // Thi
 
 if($_POST['page'] == "post") {
   extract($_POST); // name, email, subject, msg
-
+  $err = null;
+  
   $response = $_POST['g-recaptcha-response'];
   $secret = $recaptcha['secretKey']; // google grcaptcha key
 
   $options = ['http' => [
                          'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
                          'method'  => 'POST',
-                         'content' => http_build_sql(["response"=>$response, "secret"=>$secret])
+                         'content' => http_build_query(["response"=>$response, "secret"=>$secret])
                         ]
              ];
 
@@ -51,40 +59,41 @@ if($_POST['page'] == "post") {
   $retAr = json_decode($ret, true);
 
   $address = "newbernzig@gmail.com";
-  $agent = substr($S->agent, 0, 254); // keep it small
-  $agent = $S->escape($agent);
-  $subject = $S->escape($subject);
-  
-  $msg = <<<EOF
+  $agent = $S->agent; //substr($S->agent, 0, 254); // keep it small
+  $msgStr = <<<EOF
 Name: $name
 Email: $email
 Message: $msg
 EOF;
 
-  $msg = $S->escape($msg);
+  $msgEmail = str_replace("\n", "<br>", $msgStr); // For the email
+
+  $msgStr = str_replace("'", "\\'", $msgStr); // For the insert
+  $subjectStr = str_replace("'", "\\'", $subject);
   
-  $verify = empty($retAr['success']) ? 0 : 1;
+  $verify = empty($retAr['success']) ? false : true;
   $reason = $retAr['error-codes'][0];
-  
+
   $S->sql("insert into $S->masterdb.contact_emails (site, ip, agent, subject, message, verify, reason, created, lasttime) ".
-            "values('$S->siteName', '$S->ip', '$agent', '$subject', '$msg', '$verify', '$reason', now(), now())");
+          "values('$S->siteName', '$S->ip', '$agent', '$subjectStr', '$msgStr', '$verify', '$reason', now(), now())");
 
   if($verify !== true) {
-    header( "refresh:5;url=contactus.php" );
-
-    echo <<<EOF
-$top
+    $err =  <<<EOF
 <h1>Failed Verification. Try Again.</h1>
 <p>$reason</p>
-<p>This page will redirect to <a href="contactus.php"><b>Contact Us</b></a> in two seconds.</p>
-$footer
 EOF;
-    exit();
+    goto POST_END;
   }
- 
-  mail($address, $subject, $msg, "From: ZieglerInfo@newbernzig.com\r\nBcc: bartonphillips@gmail.com", "-fbarton@bartonphillips.com");
 
-  header( "refresh:5;url=index.php" );
+  $header = "From: ZiglerInfo@newbernzig.com\r\nBcc: bartonphillips@gmail.com\r\n";
+  $header .= "MIME-Version: 1.0\r\n";
+  $header .= "Content-type: text/html; charset=UTF-8\r\n";
+
+  //$address = "bartonphillips@gmail.com";
+  
+  mail($address, $subject, $msgEmail, $header, "-fbarton@bartonphillips.com");
+
+  header( "refresh:5;url=contactus.php" );
 
   echo <<<EOF
 $top
@@ -94,21 +103,25 @@ $footer
 EOF;
 
   exit();
+POST_END:  
 }
 
 echo <<<EOF
 $top
+<div id="container">
+<div id="error">$err</div>
 <div id="form">
-<form method="post">
+<form action="contactus.php" method="post">
 <table>
-<tr><th>Name</th><td><input type="text" required name="name"></td></tr>
-<tr><th>Email</th><td><input type="text" required name="email"></td></tr>
-<tr><th>Subject</th><td><input type="text" required name="subject"></td></tr>
-<tr><th>Message</th><td><textarea  placeholder="Enter Message" required name="msg"></textarea></td></tr>
+<tr><th>Name</th><td><input type="text" required name="name" value="$name"></td></tr>
+<tr><th>Email</th><td><input type="text" required name="email" value="$email"></td></tr>
+<tr><th>Subject</th><td><input type="text" required name="subject" value="$subject"></td></tr>
+<tr><th>Message</th><td><textarea  placeholder="Enter Message" required name="msg">$msg</textarea></td></tr>
 </table>
 <div class="g-recaptcha" data-sitekey="{$recaptcha['siteKey']}"></div>
 <button type="submit" name="page" value="post">Submit</button>
 </form>
+</div>
 </div>
 $footer
 EOF;
