@@ -74,8 +74,10 @@ EOF;
   $verify = empty($retAr['success']) ? false : true;
   $reason = $retAr['error-codes'][0];
 
+  $ver = $verify === true ? 1 : 0;
+  
   $S->sql("insert into $S->masterdb.contact_emails (site, ip, agent, subject, message, verify, reason, created, lasttime) ".
-          "values('$S->siteName', '$S->ip', '$agent', '$subjectStr', '$msgStr', '$verify', '$reason', now(), now())");
+          "values('$S->siteName', '$S->ip', '$agent', '$subjectStr', '$msgStr', $ver, '$reason', now(), now())");
 
   if($verify !== true) {
     $err =  <<<EOF
