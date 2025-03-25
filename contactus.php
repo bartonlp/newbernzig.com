@@ -117,9 +117,7 @@ EOF;
     goto POST_END;
   }
 
-  //$apiKey = new \SendGrid(getenv('SENDGRID_API_KEY'));
-  $apiKey = "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";
-  //$apiKey = require "/var/www/PASSWORDS/sendgrid-api-key";
+  $apiKey = require "/var/www/PASSWORDS/sendgrid-api-key";
 
   $sendgrid = new \SendGrid($apiKey);
 
