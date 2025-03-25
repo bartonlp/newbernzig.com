@@ -1,12 +1,9 @@
 <?php
 
 // BLP 2023-09-07 - added to let me know if someone calls this directly.
- 
-if(!class_exists("SiteClass")) {
-  $ip = $_SERVER['REMOTE_ADDR'];
-  error_log("bartonphillips.com/banner.i.php: Called directly: $ip");
-  echo "<h1>Not Authorized</h1><p>This file is not to be run directly, rather it is used by another file</p>";
-  exit();
+
+if(!class_exists("Database")) {
+  header("location: https://bartonlp.com/otherpages/NotAuthorized.php");
 }
 
 return <<<EOF
@@ -26,7 +23,7 @@ New Bern, North Carolina 28560<br>
 </address>
 <p>GREAT DISCOUNTS<br>
 BEST RATES</p>
-<img id="hotelimage" src="/images/resizeimg.png"> <!-- picture of hotel -->
+<img id="hotelimage" src="images/resizeimg.png"> <!-- picture of hotel -->
 </header> <!-- end header -->
 
 <!-- Sidebar -->

@@ -7,6 +7,8 @@ Header set Access-Control-Allow-Origin *
 # SET ENV VARIABLES
 SetEnv SITELOADNAME /var/www/vendor/bartonlp/site-class/includes/siteload.php
 setEnv SITECLASS_DIR /var/www/vendor/bartonlp/site-class/includes
+#SetEnv SITELOADNAME /var/www/site-class/includes/autoload.php
+#setEnv SITECLASS_DIR /var/www/site-class/includes
 # END ENV
 
 RewriteEngine on
@@ -16,4 +18,3 @@ RewriteRule ^robots\.txt$ robots.php [L,NC]
 RewriteRule ^Sitemap\.xml$ sitemap.php [L,NC]
 
 RewriteRule ^csstest-(.*)\.css$ https://bartonlp.com/otherpages/tracker.php?id=$1&page=csstest [L,QSA]
-

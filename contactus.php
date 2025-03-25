@@ -1,4 +1,7 @@
 <?php
+// Newbernzig contactus
+
+use SendGrid\Mail\Mail; // Use SendGrid for emails
 
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
@@ -35,7 +38,15 @@ $recaptcha = require_once("/var/www/PASSWORDS/newbernzig-recaptcha.php"); // Thi
 
 if($_POST['page'] == "post") {
   extract($_POST); // name, email, subject, msg
+
+  if(empty($name) || empty($email) || empty($msg) || empty($subject)) {
+    $err = "<h2>You must supply a name, email, subject and message.</h2>";
+    goto POST_END;
+  }
+
   $err = null;
+
+  // Do the captcha to see if this is a human.
   
   $response = $_POST['g-recaptcha-response'];
   $secret = $recaptcha['secretKey']; // google grcaptcha key
@@ -57,24 +68,43 @@ if($_POST['page'] == "post") {
 
   $ret = file_get_contents("https://www.google.com/recaptcha/api/siteverify", false, $context);
   $retAr = json_decode($ret, true);
+  $verify = empty($retAr['success']) ? false : true;
+  $reason = $retAr['error-codes'][0];
+  $ver = $verify === true ? 1 : 0;
+
+  vardump("retAr", $retAr);
+
+  // Now we have the captcha result $ver and $verify and a reason in $reason
+
+  // Set up SendGrid info.
+  
+  $mail = new Mail();
 
   $address = "newbernzig@gmail.com";
-  $agent = $S->agent; //substr($S->agent, 0, 254); // keep it small
-  $msgStr = <<<EOF
+  //$address = "bartonphillips@gmail.com";
+  
+  $mail->setFrom("Info@newbernzig.com");
+  $mail->setSubject($subject);
+  $mail->addTo($address);
+  
+  $mail->addBcc("bartonphillips@gmail.com");
+  //$mail->addCc("barton@bartonphillips.com");
+
+  $content =<<<EOF
 Name: $name
 Email: $email
 Message: $msg
 EOF;
 
-  $msgEmail = str_replace("\n", "<br>", $msgStr); // For the email
+  $msgEmail = str_replace("\n", "<br>", $content); // For the email
 
-  $msgStr = str_replace("'", "\\'", $msgStr); // For the insert
+  $mail->addContent("text/plain", 'View this in HTML mode');
+  $mail->addContent("text/html", $msgEmail);
+
+  $agent = $S->agent;
+
+  $msgStr = str_replace("'", "\\'", $content); // For the insert
   $subjectStr = str_replace("'", "\\'", $subject);
-  
-  $verify = empty($retAr['success']) ? false : true;
-  $reason = $retAr['error-codes'][0];
-
-  $ver = $verify === true ? 1 : 0;
   
   $S->sql("insert into $S->masterdb.contact_emails (site, ip, agent, subject, message, verify, reason, created, lasttime) ".
           "values('$S->siteName', '$S->ip', '$agent', '$subjectStr', '$msgStr', $ver, '$reason', now(), now())");
@@ -87,13 +117,25 @@ EOF;
     goto POST_END;
   }
 
-  $header = "From: ZiglerInfo@newbernzig.com\r\nBcc: bartonphillips@gmail.com\r\n";
-  $header .= "MIME-Version: 1.0\r\n";
-  $header .= "Content-type: text/html; charset=UTF-8\r\n";
+  //$apiKey = new \SendGrid(getenv('SENDGRID_API_KEY'));
+  $apiKey = "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";
+  //$apiKey = require "/var/www/PASSWORDS/sendgrid-api-key";
 
-  //$address = "bartonphillips@gmail.com";
+  $sendgrid = new \SendGrid($apiKey);
+
+  $response = $sendgrid->send($mail);
+
+  vardump("response: ", $response);
+  echo "code={$response->statusCode()}";
   
-  mail($address, $subject, $msgEmail, $header, "-fbarton@bartonphillips.com");
+  if($response->statusCode() > 299) {
+    print $response->statusCode() . "<br><pre>";
+    print_r($response->headers());
+    print "</pre>Body: <pre>";
+    print_r(json_decode($response->body()));
+    print "</pre>";
+    exit();
+  }  
 
   header( "refresh:5;url=contactus.php" );
 
@@ -105,7 +147,7 @@ $footer
 EOF;
 
   exit();
-POST_END:  
+POST_END:
 }
 
 echo <<<EOF

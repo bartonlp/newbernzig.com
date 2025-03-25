@@ -1,4 +1,19 @@
 <?php
+// This is the home file for https://newbernzig.com
+
+// This is a ChatGDP suggestion that I added to try to prevent a NEW Chrome warning in DevTools. It
+// didn't fix the problem but it doesn't seen to cause any problems. So for now I will leave it in.
+// NOTE: I have opted to 'hide' these warning in DevTools.
+header("Content-Security-Policy: default-src 'self'; 
+    frame-src https://www.youtube-nocookie.com; 
+    script-src 'self' https://www.youtube-nocookie.com; 
+    connect-src 'self' https://www.youtube-nocookie.com; 
+    img-src 'self' https://www.youtube-nocookie.com data:;
+    style-src 'self' 'unsafe-inline'; 
+    sandbox allow-scripts allow-same-origin allow-presentation;
+    report-uri https://bartonlp.com/otherpages/cspreport2.php");
+// End ChatGDP suggestion
+
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 
@@ -95,7 +110,14 @@ Stay at &quot;The Zig&quot;<br>
 
 <!-- Marilyn: The Ziegler Suites Video -->
 <div id="youtube-vidio">
-<iframe src="https://www.youtube.com/embed/nGNz27RjAok?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe 
+    src="https://www.youtube-nocookie.com/embed/nGNz27RjAok?rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&autoplay=0&playsinline=1"
+    frameborder="0"
+    allow="autoplay; encrypted-media; fullscreen; picture-in-picture; clipboard-write"
+    referrerpolicy="origin"
+    loading="lazy">
+</iframe>
+
 </div>
 
 <img src="/images/zig sign.jpg">

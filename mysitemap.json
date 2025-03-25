@@ -31,16 +31,16 @@
   },
   "defaultCss": "css/newbernzig.css", // The symlink below uses 'defaultCss' as the css to use
   "headFile": "/var/www/bartonphillips.com/includes/head.i.php", // use standard head
-  "bannerFile": "includes/banner.i.php", // NOTE: the *File must NOT HAVE a preceeding slash
-  "footerFile": "includes/footer.i.php", // because they are file_get_contents() loaded
+  "bannerFile": "/var/www/newbernzig.com/includes/banner.i.php", // NOTE: the *File must NOT HAVE a preceeding slash
+  "footerFile": "/var/www/newbernzig.com/includes/footer.i.php", // because they are file_get_contents() loaded
   // and that would mean they are in the ROOT directory. They would
   // need a full path like /var/www/tysonweb/ to work.
   "count": true,
   "ctrmsg": "Counter Reset: June 13, 2023",
   "favicon": "/favicon.ico",
   "reset": "2021-03-01",
-  "trackerImg1": "https://www.newbernzig.com/images/Z.jpg",
-  "trackerImg2": "https://www.newbernzig.com/images/newbern-300anniversary.png",
+  "trackerImg1": "https://newbernzig.com/images/Z.jpg",
+  "trackerImg2": "https:/newbernzig.com/images/newbern-300anniversary.png",
   // the trackerImg should have a slash before or a full url.
   // trackerImg2 will use the default 1px image for 'normal'
   "EMAILADDRESS": "bartonphillips@gmail.com", // NEED to change to tyson group.
