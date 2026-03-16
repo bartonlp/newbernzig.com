@@ -1,17 +1,16 @@
 <?php
+// BLP 2025-04-08 - use $b->names
 
-// BLP 2023-09-07 - added to let me know if someone calls this directly.
-
-if(!class_exists("Database")) {
-  header("location: https://bartonlp.com/otherpages/NotAuthorized.php");
+if(!class_exists("dbPdo")) {
+  header("location: https://bartonlp.com/otherpages/NotAuthorized.php?site=newbernzig.com&page=banner.i.php");
 }
 
 return <<<EOF
 <div class="grid-section">
 <header id="header">
-$image1
-$image2
-$mainTitle
+$b->image1
+$b->image2
+$b->mainTitle
 <h2>A Living Part of<br>
 New Bern North Carolina History</h2>
 <address>
@@ -92,7 +91,7 @@ BEST RATES</p>
 
 <noscript>
 <p style='color: red; background-color: #FFE4E1; padding: 10px'>
-$image3
+$b->image3
 Your browser either does not support <b>JavaScripts</b> or you have JavaScripts disabled, in either case your browsing
 experience will be significantly impaired. If your browser supports JavaScripts but you have it disabled consider enabaling
 JavaScripts conditionally if your browser supports that. Sorry for the inconvienence.</p>

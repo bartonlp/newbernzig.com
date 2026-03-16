@@ -66,23 +66,23 @@ $top
 </div>
 <hr>
 <div class="h3">Rooms:
-<p>One night $89,
-two or more nights $84,
-per week $499, per month $1,350.
+<p>One night $119,
+two or more nights $105,
+per week $650, per month $1,750.
 </p>
 </div>
 
 <div class="h3">Suites:
 <p>The Elvis and the Marilyn Suites.
 An additional fold-out or captain's bed, stack washer/dryer, stove, dishwasher.<br>
-$125 per night (with two-day minumum), $550 per week, $1,500 per month.<br>
+$165 per night (with two-day minumum), $850 per week, $2,200 per month.<br>
 Some pets allowed at Proprietor's Sole Discretion.<br>
-$20 per night or $75 week pet fee.</p>
+$30 per night or $125 week pet fee.</p>
 </div>
 
 <div class="h3">Want a larger place? The Abbot Cottage:
 <p>Two bedrooms, living, kitchen/dining and bath rooms.<br>
-$125 per night (three-day minimum), $525 per week, $1,500 per month.</p
+$189 per night (three-day minimum), $925 per week, $2,400 per month.</p
 </div>
 
 <hr>

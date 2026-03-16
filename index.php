@@ -4,6 +4,7 @@
 // This is a ChatGDP suggestion that I added to try to prevent a NEW Chrome warning in DevTools. It
 // didn't fix the problem but it doesn't seen to cause any problems. So for now I will leave it in.
 // NOTE: I have opted to 'hide' these warning in DevTools.
+/* Removed 2025-09-28
 header("Content-Security-Policy: default-src 'self'; 
     frame-src https://www.youtube-nocookie.com; 
     script-src 'self' https://www.youtube-nocookie.com; 
@@ -13,7 +14,7 @@ header("Content-Security-Policy: default-src 'self';
     sandbox allow-scripts allow-same-origin allow-presentation;
     report-uri https://bartonlp.com/otherpages/cspreport2.php");
 // End ChatGDP suggestion
-
+*/
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 
@@ -238,7 +239,7 @@ Two bedrooms, one bath, full kitchen.<br>
 Fully furnished, linens, cookware,<br>
 WIFI and cable TV included.<br>
 Maid service available for an extra charge.<br>
-$189 per night, $399 for three nights or $550 per week.<br>
+$189 per night, $499 for three nights or $925 per week.<br>
 Extended-stay discounts negotiated.<br>
 <br>
 <img src="/images/8TH STREET12.JPG">

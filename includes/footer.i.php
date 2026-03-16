@@ -1,30 +1,30 @@
 <?php
 // Custom due to the Facebook info
+// BLP 2025-04-08 - use $f->names instead of $b->names
 
-// BLP 2023-09-07 - added to let me know if someone calls this directly.
-
-if(!class_exists("Database")) {
-  header("location: https://bartonlp.com/otherpages/NotAuthorized.php");
+if(!class_exists("dbPdo")) {
+  header("location: https://bartonlp.com/otherpages/NotAuthorized.php?site=newbernzig.com&page=footer.i.php");
 }
 
 return <<<EOF
 <footer>
 <hr>
 <div>
-  <a href="https://www.facebook.com/pages/New-Bern-NC/The-Ziegler-Inn-and-Suites/148026394622">Follow us on Facebook</a>
+  <a href="https://www.facebook.com/tysongroup">Follow us on Facebook</a>
 </div>
-$b->aboutwebsite
+$f->aboutwebsite
 <address>
-$b->copyright
-$b->address
+$f->copyright
+$f->address
 </address>
-$b->msg
-$b->msg1
+$f->msg
+$f->msg1
 $counterWigget
 $lastmod
-$b->msg2
+$f->msg2
 </footer>
-$geo
-$b->script
-$b->inlineScript
+$f->geo
+$f->extra
+$f->script
+$f->inlineScript
 EOF;

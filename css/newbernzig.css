@@ -1,5 +1,4 @@
 /* For newbernzig.com */
-@import url('https://bartonphillips.net/css/hitcounter.css');
 
 * {
   box-sizing: border-box;
@@ -154,4 +153,41 @@ rect { width: 40px; height: 10px; }
   #headerImage2 { width: 112px; height: 112px; }
   #hotelimage { width: 90%; } /* image in banner.i.php of the front of the hotel */
   #logo { width: 112px; height: 112px; margin-top: 80px; } /* 'Z' in banner.i.php as the 'logo' */
+}
+
+/* */
+/*
+  The #hitCounter... are for the SiteClass::getCounterWigget() which can be at the bottom of the page.
+  #F5DEB3==rgb(245,222,179) is 'wheat' for the background
+  rgb(123, 16, 66) is a burgundy for the number
+*/
+
+:root {
+  --blpHitcntrBgColor: #F5DEB3;
+  --blpHitcntrBorder: 8px ridge yellow;
+  --blpHitcntrColor: rgb(123, 16, 66);
+}
+#hitCounter {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+}
+#hitCountertbl {
+  font-size: 1em;
+  width: 0;
+  border: var(--blpHitcntrBorder); /*8px ridge yellow;*/
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--blpHitcntrBgColor);
+}
+#hitCountertr {
+  width: 0;
+  border: var(--blpHitcntrBorder);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--blpHitcntrBgColor) 
+}
+#hitCounterth {
+  color: var(--blpHitcntrColor);
 }

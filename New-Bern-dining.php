@@ -51,13 +51,6 @@ You'll love breakfasts there; you can get the works (even pancakes) or their
 homemade gourmet bagels and muffins with a variety of cream cheese flavors. 
 Lunch is terrific too. (252)636-0133
 
-<li>CAPTAIN RATTY'S SEAFOOD and STEAKHOUSE 202 Middle St.<br>
-Ratty's is a restaurant/oyster bar in the best location in town. Upstairs is 
-a piano bar with live entertainment several nights a week, and rootop dining is available when weather permits. It has become the 
-&quot;in&quot; place to relax and take friends. World's best clam 
-chowder. PS, the filet is the best we've ever had. Somewhat pricey 
-but delicious. (252)633-2088
-
 <li>CYPRESS HALL KITCHEN and BAR 219 Middle St.<br>
 Provides a culinary adventure of Southern cuisine using fresh ingredient.
 Upscale dining experience in a beautiful historic building.
@@ -129,7 +122,6 @@ raw brick walls. These folks know their business. (252)636-2430
 <li>MJ'S RAW BAR &amp; GRILLE 216 Middle St.<br>
 Understated decor, set up for eatin'
 the good stuff. Full bar. Crabcakes tasty. Little Neck clams, Lots of creative specials. No reservations. (252)635-6890
-
 
 <li>MUSASHI STEAK &amp; SEAFOOD RESTAURANT 2041 S. Glenburnie Rd.<br>
 Good theater with meals cooked at your table and a fun atmosphere. Very heavy on the 
